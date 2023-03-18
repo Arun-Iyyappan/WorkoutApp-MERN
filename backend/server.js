@@ -20,8 +20,9 @@ app.use((req,res,next) =>{
 
 app.use('/api/workouts',workoutRoutes)
 app.use('/api/user',userRoutes)
+const url = process.env.MONG_URL
 
-mongoose.connect(process.env.MONG_URL)
+mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
 .then(() => {
     app.listen(process.env.PORT , () =>{
         console.log('listening!');
@@ -30,4 +31,5 @@ mongoose.connect(process.env.MONG_URL)
 .catch((error) => {
     console.log(error);
 })
+
 

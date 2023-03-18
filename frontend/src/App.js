@@ -6,6 +6,11 @@ import Navbar from './components/Navbar'
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 
+import BMI from './pages/BMI';
+import Exercises from './pages/Exercises';
+import Nutrition from './pages/Nutrition';
+
+
 function App() {
   const { user} = useAuthContext()
 
@@ -27,6 +32,9 @@ function App() {
               path="/signup" 
               element={!user ? <Signup /> : <Navigate to="/" />} 
             />
+            <Route path='/exercises' element={ <Exercises />} />
+            <Route path='/bmi' element={<BMI/>} />
+            <Route path='/nutrition' element={<Nutrition />} />
           </Routes>
         </div>
       </BrowserRouter>

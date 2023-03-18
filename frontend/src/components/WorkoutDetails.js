@@ -2,6 +2,7 @@ import { useWorkoutsContext } from "../hooks/useWorkoutContext"
 
 import { useAuthContext } from "../hooks/useAuthContext"
 
+
 const WorkoutDetails = ({ workout }) => {
   const { dispatch } = useWorkoutsContext()
    const { user} = useAuthContext()
@@ -48,8 +49,12 @@ const WorkoutDetails = ({ workout }) => {
       duration /= division.amount
     }
   }
+     
+
+  
 
     return (
+      <>
       <div className="workout-details">
         <h4>{workout.title}</h4>
         <p><strong>Load (kg): </strong>{workout.load}</p>
@@ -57,7 +62,11 @@ const WorkoutDetails = ({ workout }) => {
         <p><strong>Updated at : </strong>{formatTimeAgo(Date.parse(workout.createdAt))}</p>
         <span className="material-symbols-outlined" onClick={handleClick}>delete</span>
         <p>{new Intl.DateTimeFormat("en-us",{dateStyle : 'full'}).format(new Date(Date.parse(workout.createdAt)))}</p>
+         
+       
       </div>
+      
+      </>
     )
   }
   

@@ -18,7 +18,10 @@ const Navbar = () => {
         </Link>
         <nav>
           {user && (
-            <div>
+            <div className='navicon'>
+              <Link to='/bmi' className='spage'><strong>BMI</strong></Link>
+              <Link to='/exercises' className='spage'><strong>Exercises</strong></Link>
+              <Link to='/nutrition' className='spage'><strong>Nutrition</strong></Link>
               <span className='glow'>{user.email}</span>
               <button  className='navbtn logout' onClick={handleClick}>Log out</button>
             </div>

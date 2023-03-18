@@ -31,7 +31,9 @@ const getWorkout = async (req, res) => {
 // create new workout
 const createWorkout = async (req, res) => {
   const {title, load, reps} = req.body
-
+  // let s = load*10;
+  // s = Number(s)  
+  // console.log(s);
   let emptyFields = []
 
   if(!title) {
@@ -50,7 +52,7 @@ const createWorkout = async (req, res) => {
   // add doc to db
   try {
     const user_id = req.user._id
-    const workout = await Workout.create({title, load, reps, user_id})
+    const workout = await Workout.create({title, load, reps, user_id}) // To modify use load :s
     res.status(200).json(workout)
   } catch (error) {
     res.status(400).json({error: error.message})
@@ -92,6 +94,7 @@ const updateWorkout = async (req, res) => {
 
   res.status(200).json(workout)
 }
+
 
 
 module.exports = {

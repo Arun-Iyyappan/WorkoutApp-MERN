@@ -1,16 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap");
 
 /* layout */
 :root {
   --primary: #1aac83;
   --error: #e7195a;
 }
-body {   
-  background: linear-gradient(90deg, rgba(1,200,194,1) 0%, rgba(192,205,219,1) 100%);
+body {
+  background: linear-gradient(
+    90deg,
+    rgba(1, 200, 194, 1) 0%,
+    rgba(192, 205, 219, 1) 100%
+  );
   margin: 0;
   font-family: "Poppins";
- 
-  
+  overflow-x: hidden;
 }
 
 .navbtn {
@@ -19,6 +22,7 @@ body {
   border: none;
   color: #ffffff;
   outline: none;
+  margin-top: 20px;
   padding: 12px 40px 10px;
   position: relative;
 }
@@ -27,7 +31,7 @@ body {
 .navbtn::after {
   border: 0 solid transparent;
   transition: all 0.3s;
-  content: '';
+  content: "";
   height: 0;
   position: absolute;
   width: 24px;
@@ -50,11 +54,13 @@ body {
   width: 100%;
 }
 
-
-
 header {
   background: #fff;
-  background: linear-gradient(90deg, rgba(1,200,194,1) 0%, rgba(192,205,219,1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(1, 200, 194, 1) 0%,
+    rgba(192, 205, 219, 1) 100%
+  );
   border-bottom: 2px solid black;
 }
 header .container {
@@ -66,17 +72,23 @@ header .container {
   justify-content: space-between;
 }
 
-.container h2{
+.navicon {
+  margin-bottom: 22px;
+}
+
+.container h2 {
   margin-left: 8px;
 }
 
-
+.spage {
+  margin-right: 30px;
+}
 
 header a {
   color: #263059;
   text-decoration: none;
 }
-.pages{
+.pages {
   max-width: 1400px;
   padding: 20px;
   margin: 0 auto;
@@ -93,7 +105,7 @@ header a {
   margin: 20px auto;
   padding: 20px;
   position: relative;
-  
+
   display: block;
 
   -webkit-transform: perspective(1px) translateZ(0);
@@ -104,11 +116,13 @@ header a {
   -webkit-transition-property: transform;
   transition-property: transform;
 }
-.workout-details:hover, .workout-details:focus, .workout-details:active {
+.workout-details:hover,
+.workout-details:focus,
+.workout-details:active {
   -webkit-transform: scale(1.06);
   transform: scale(1.06);
+  background-color: rgb(158, 223, 214);
 }
-
 
 .workout-details h4 {
   margin: 0 0 10px 0;
@@ -119,20 +133,20 @@ header a {
   margin: 0;
   font-size: 0.9em;
   color: #555;
- 
 }
 .workout-details span {
   position: absolute;
   top: 20px;
   right: 20px;
   cursor: pointer;
-  background: #f1f1f1;
+  background: transparent;
   padding: 6px;
   border-radius: 50%;
   color: #333;
 }
 
-label, input {
+label,
+input {
   display: block;
 }
 input {
@@ -162,10 +176,9 @@ div.error {
   margin: 20px 0;
 }
 
-input.error{
-  border : 1px solid var(--error)
+input.error {
+  border: 1px solid var(--error);
 }
-
 
 nav {
   display: flex;
@@ -175,13 +188,13 @@ nav a {
   margin-left: 10px;
 }
 
-form.signup, form.login {
+form.signup,
+form.login {
   max-width: 400px;
   margin: 40px auto;
   padding: 40px;
   background: #fff;
-  border-radius: 30px
-  
+  border-radius: 30px;
 }
 
 .signh3 {
@@ -190,8 +203,8 @@ form.signup, form.login {
   color: #263059;
 }
 
-.signh3::after{
-  content: '';
+.signh3::after {
+  content: "";
   position: absolute;
   width: 100%;
   transform: scaleX(0);
@@ -203,11 +216,10 @@ form.signup, form.login {
   transition: transform 0.25s ease-out;
 }
 
-.signh3:hover::after{
+.signh3:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
-
 
 nav button {
   background: #fff;
@@ -218,22 +230,304 @@ nav button {
   font-family: "Poppins";
   cursor: pointer;
   font-size: 1em;
-  
 }
 
-nav .logout{
+nav .logout {
   margin-left: 15px;
 }
 
-.glow{
+.glow {
   color: #06486f;
-  text-shadow:
-    0 0 5px #fff,
-    0 0 10px #fff,
-    0 0 20px #fff,
-    0 0 40px #0ff,
-    0 0 80px #0ff,
-    0 0 90px #0ff,
-    0 0 100px #0ff,
-    0 0 150px #0ff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ff,
+    0 0 80px #0ff, 0 0 90px #0ff, 0 0 100px #0ff, 0 0 150px #0ff;
+}
+
+.Cbox {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.cbox {
+  display: flex;
+  margin-right: 3px;
+}
+
+.cbox > input {
+  margin: 0 5px;
+}
+
+.box {
+  color: #263059;
+  font-weight: 500;
+}
+
+.exerbg {
+  background-color: white;
+  border-radius: 40px;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.topic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.searchtopic {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.searchtopic button {
+  background-color: #263059;
+  width: 80px;
+  color: #ffefef;
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  height: 50px;
+}
+
+.exul {
+  list-style-type: disc;
+  margin-left: 1.5em;
+  margin-top: 0.5em;
+}
+
+.exli {
+  margin-bottom: 0.5em;
+  padding-left: 0.5em;
+  text-indent: -0.5em;
+}
+
+.exerbg {
+  background-color: white;
+  position: relative;
+  width: 70%;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 12.5%;
+
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.exerbg:hover {
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  background-color: rgb(158, 223, 214);
+}
+
+.exlink {
+  position: absolute;
+  top: 2px;
+  left: 93%;
+
+  width: 200px;
+  height: 100px;
+  background-color: transparent;
+}
+
+.exlink a {
+  text-decoration: none;
+  display: inline-block;
+  background-color: #263059;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: hidden;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Popup background */
+.popup-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+/* Popup box */
+.popup-box {
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+  padding: 40px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #fff;
+}
+
+/* Popup text */
+.popup-text {
+  font-size: 0.9em;
+  margin-bottom: 30px;
+  text-shadow: 0 0 5px #fff;
+}
+
+/* Popup button */
+.popup-button {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  text-shadow: 0 0 5px #fff;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.popup-button:hover {
+  background-color: #fff;
+  color: #000;
+  text-shadow: none;
+}
+
+/* Animation keyframes */
+@keyframes popup-appear {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Animation styles */
+.popup-box {
+  animation: popup-appear 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  transform-origin: center center;
+}
+
+.button-container {
+  display: inline;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  color: white;
+  border: none;
+  background: transparent;
+  border-radius: 4px;
+}
+
+/* Style for the YouTube icon */
+.button-container i {
+  display: inline-block;
+  background-image: url("../src/assets/images/pngtree-youtube-social-media-3d-stereo-png-image_6308427.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 50px;
+
+  height: 50px;
+}
+
+.stybut {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stybut h1 {
+  left: 0;
+}
+
+.nutbg {
+    
+    /* width: 500px;
+    height: 250px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: flex;
+    margin-top: 15px;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 20px;
+    margin-left: 430px; */
+    background-color: white;
+    border-radius: 40px;
+    padding: 20px;
+
+    position: relative;
+    width: 35%;
+    justify-content: center;
+    align-items: center;
+    margin: 22px 31%;
+  
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+      rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+      rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    
+  
+}
+
+.nutbg:hover {
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  background-color: rgb(158, 223, 214);
+}
+
+.nutbg h1{
+  color: #263059;
+}
+
+.stybut h1{
+  color: #263059;
+}
+
+.errordata p{
+  border: 1px solid var(--error);
+   padding: 10px;
+  background: #ffefef;
+  border: 1px solid var(--error);
+  color: var(--error);
+  border-radius: 4px;
+  margin : 30px auto;
+  width: 35%;
+}
+div.error {
+  padding: 10px;
+  background: #ffefef;
+  border: 1px solid var(--error);
+  color: var(--error);
+  border-radius: 4px;
+  margin: 20px 0;
+}
+
+input.error {
+  border: 1px solid var(--error);
 }
